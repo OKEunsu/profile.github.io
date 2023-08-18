@@ -6,70 +6,33 @@
 <title>전자명함</title>
 <style>
   body {
-    font-family: 'Helvetica', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-  .frame {
-    border: 20px solid #dedede;
-    border-radius: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    font-family: Arial, sans-serif;
+    text-align: center;
     padding: 20px;
-    text-align: center;
-    background-color: #ffffff;
-    position: relative; /* QR 코드 위치를 조정하기 위해 position 추가 */
   }
-  .name {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
+  
+  .business-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
   }
-  .title {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 10px;
-  }
-  .contact {
-    font-size: 16px;
-    color: #888;
-    margin-bottom: 10px;
-  }
+  
   .qr-code {
-    width: 200px;
-    height: 200px;
     margin-top: 20px;
-    position: absolute;
-    bottom: -60px; /* QR 코드를 아래로 이동 */
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #222;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
   }
 </style>
 </head>
 <body>
-<div class="frame">
-  <img class="qr-code" src="an img Gogh maze.png" alt="QR Code"> <!-- QR 코드 이미지 파일 경로로 변경하세요 -->
-</div>
-<div class="frame">
-  <div class="name">이름</div>
-  <div class="title">직책</div>
-  <div class="contact">이메일: example@email.com</div>
-  <div class="contact">전화번호: 123-456-7890</div>
-</div>
-<div class="footer">Copyright © 2023 All rights reserved.</div>
+  <div class="qr-code">
+    <img src="an img Gogh maze.png" alt="QR Code" width="150">
+  </div>
+  <div class="business-card">
+    <h1>홍길동</h1>
+    <p>직책: 대표이사</p>
+    <p>회사: ABC 주식회사</p>
+    <p>이메일: hong@example.com</p>
+    <p>전화번호: 123-4567-8901</p>
+  </div>
 </body>
 </html>
