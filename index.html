@@ -19,6 +19,9 @@
             padding: 1rem 0;
         }
         .container {
+            display: flex;
+            flex-direction: column; /* 세로 방향으로 배치 */
+            align-items: center; /* 가운데 정렬 */
             max-width: 100%;
             padding: 1rem;
             background-color: #fff;
@@ -65,12 +68,14 @@
         <div class="profile-details">
             <h2>About Me</h2>
             <p>안녕하세요, 데이터사이언티스트를 꿈꾸는 옥은수입니다.</p>
+        </div>
+        <div class="profile-details">
             <h2>Contact</h2>
             <p>Email: esok0617@gmail.com</p>
             <p>Notion Profile: <a href="https://www.notion.so/eunsuok/Profile-34a91f735d3a4bc3b388a02a16ffa149">Notion Page</a></p>
         </div>
         <div class="qr-code">
-            <img src="an img Gogh maze.png" alt="QR Code" style="max-width: 400px;">
+            <img src="an img Gogh maze.png" alt="QR Code" style="max-width: 100px;">
         </div>
     </div>
 </body>
