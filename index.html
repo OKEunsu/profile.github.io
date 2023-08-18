@@ -19,6 +19,8 @@
             padding: 2rem 0;
         }
         .container {
+            display: flex; /* Display flex for aligning QR code to the right */
+            justify-content: space-between; /* To evenly distribute content and QR code */
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
@@ -40,19 +42,27 @@
             font-size: 24px;
             text-decoration: none;
         }
+        .qr-code {
+            max-width: 100px; /* Adjust the size of the QR code as needed */
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Ok Eunsu | 옥은수</h1>
-        <p>Data Analysist</p>
+        <p>Data Analyst</p>
     </header>
     <div class="container">
-        <h2>About Me</h2>
-        <p>안녕하세요, 데이터사이언티스트를 꿈꾸는 옥은수입니다.</p>
-        <h2>Contact</h2>
-        <p>Email: esok0617@gmail.com</p>
-        <p>Profile: <a href="https://www.notion.so/eunsuok/Profile-34a91f735d3a4bc3b388a02a16ffa149">Notion Page</a></p>
+        <div class="profile-details">
+            <h2>About Me</h2>
+            <p>안녕하세요, 데이터사이언티스트를 꿈꾸는 옥은수입니다.</p>
+            <h2>Contact</h2>
+            <p>Email: esok0617@gmail.com</p>
+            <p>Notion Profile: <a href="https://www.notion.so/eunsuok/Profile-34a91f735d3a4bc3b388a02a16ffa149">Notion Page</a></p>
+        </div>
+        <div class="qr-code">
+            <img src="an img Gogh maze.png" alt="QR Code">
+        </div>
     </div>
 </body>
 </html>
