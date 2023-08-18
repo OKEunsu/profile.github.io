@@ -12,22 +12,17 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-        header {
-            background-color: #1570EF;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-        }
-        .container {
+        .profile-card {
             display: flex;
-            flex-direction: column; /* 세로 방향으로 배치 */
-            align-items: center; /* 가운데 정렬 */
-            max-width: 100%;
-            padding: 1rem;
+            flex-direction: column;
+            align-items: center;
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 2rem;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
+        h1 {
             margin-bottom: 0.5rem;
         }
         p {
@@ -47,33 +42,20 @@
             text-align: center;
             margin-top: 1rem;
         }
-        
-        /* 미디어 쿼리를 사용하여 화면 너비가 600px 이하일 때 스타일 변경 */
-        @media (max-width: 600px) {
-            .container {
-                padding: 1rem;
-            }
-            .qr-code {
-                margin-top: 1rem;
-            }
-        }
     </style>
 </head>
 <body>
-    <header>
+    <div class="profile-card">
         <h1>Ok Eunsu | 옥은수</h1>
         <p>Data Analyst</p>
-    </header>
-    <div class="container">
-        <div class="profile-details">
-            <h2>About Me</h2>
-            <p>안녕하세요, 데이터사이언티스트를 꿈꾸는 옥은수입니다.</p>
-        </div>
-        <div class="profile-details">
-            <h2>Contact</h2>
-            <p>Email: esok0617@gmail.com</p>
-            <p>Notion Profile: <a href="https://www.notion.so/eunsuok/Profile-34a91f735d3a4bc3b388a02a16ffa149">Notion Page</a></p>
-        </div>
+        
+        <h2>About Me</h2>
+        <p>안녕하세요, 데이터사이언티스트를 꿈꾸는 옥은수입니다.</p>
+        
+        <h2>Contact</h2>
+        <p>Email: esok0617@gmail.com</p>
+        <p>Notion Profile: <a href="https://www.notion.so/eunsuok/Profile-34a91f735d3a4bc3b388a02a16ffa149">Notion Page</a></p>
+        
         <div class="qr-code">
             <img src="an img Gogh maze.png" alt="QR Code" style="max-width: 100px;">
         </div>
