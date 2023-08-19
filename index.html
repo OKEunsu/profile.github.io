@@ -65,10 +65,32 @@
   }
   .badge-header {
       cursor: pointer;
-    }
+  }
+  .profile-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* 동그라미 모양으로 만듦 */
+    overflow: hidden; /* 동그라미 내부의 이미지가 넘치지 않도록 함 */
+    background-color: #f0f0f0; /* 이미지가 로딩되기 전 배경색 설정 */
+    display: inline-block;
+  }
+  .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지 비율 유지하면서 화면에 꽉 채우도록 설정 */
+  }
 </style>
 </head>
 <body>
+  <div class="profile-image-container">
+    <div class="profile-image">
+      <img src="미모티콘.png" alt="Profile Image">
+    </div>
+  </div>
   <div class="business-card">
     <h1>옥은수</h1>
     <p><strong>직책:</strong> 데이터분석가</p>
