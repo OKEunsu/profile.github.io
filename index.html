@@ -79,6 +79,46 @@
     </div>
       </div>
   </div>
+  <div class="business-card" style="margin-top: 20px; padding-top: 5px;"> <!-- You can adjust the margin-top value as needed for spacing -->
+    <h2>Skill Set</h1>
+      <div class="badge-container">
+        <div class="badge-item">
+          <div class="badge-header" onclick="toggleDescription(this)">
+            <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+          </div>
+          <div class="badge-description" style="display: none;">
+            <img src="https://img.shields.io/badge/streamlit%20-%23FF0000.svg?style=for-the-badge&logo=streamlit&logoColor=white">
+          </div>
+        </div>
+      </div>
+      <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+      <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+      <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+      <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+      <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white">
+      <img src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white">
+      <img src="https://img.shields.io/badge/django-092E20?style=for-the-badge&logo=django&logoColor=white">
+      <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+      <img src="https://img.shields.io/badge/flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white">
+      <img src="https://img.shields.io/badge/tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white">
+      <img src="https://img.shields.io/badge/r-276DC3?style=for-the-badge&logo=r&logoColor=white">
+      
+      
+  </div>
+  </div>
+  <div id="python-popup" class="popup" style="display: none;">
+    <div class="business-card" style="margin-top: 20px;">
+      <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+    </div>
+  </div>
+  <script>
+    function toggleDescription(badgeHeader) {
+      var description = badgeHeader.nextElementSibling;
+      if (description) {
+        description.style.display = (description.style.display === 'none') ? 'block' : 'none';
+      }
+    }
+  </script>
 
 </body>
 </html>
