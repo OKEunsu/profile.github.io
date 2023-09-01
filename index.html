@@ -1,196 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eunsu Profile</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="avicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="favicon/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-<style>
-  body {
-    font-family: 'Noto Sans KR', sans-serif;
-    text-align: center;
-    padding: 20px;
-    background-color: #f5f5f5;
-  }
-  
-  #map,
-  .business-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 90%; /* 최대 너비 설정 */
-    margin: 0 auto;
-    text-align: left;
-  }
-  
-  h1 {
-    margin-top: 0;
-  }
-  
-  p {
-    margin: 10px 0;
-  }
-  .sns-icons a {
-    display: inline-block;
-    margin-right: 15px;
-    margin-top: 10px;
-  }
-  
-  .sns-icons img {
-    width: 30px;
-    height: 30px;
-  }
-  .badge-header img {
-    pointer-events: auto; 
-  }
-  .badge-header {
-    cursor: pointer;
-    display: inline-block;
-  }
-  .profile-image-container {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .profile-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; 
-    overflow: hidden; 
-    background-color: #f0f0f0; 
-    display: inline-block;
-  }
-  .profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-  }
-  @media (max-width: 768px) {
-    #map,
-    .business-card {
-      max-width: 100%; /* 휴대폰 화면 크기에서는 100%로 설정하여 동일한 너비를 유지합니다. */
-      height: 200px; /* 휴대폰 화면 크기에 맞게 조절한 높이 */
-    }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eunsu Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <!-- 다른 아이콘 크기도 추가 -->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .business-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 90%; /* 최대 너비 설정 */
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .sns-icons {
+            text-align: center; /* 중앙 정렬 */
+        }
+
+        .sns-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            margin-top: 10px;
+        }
+
+        .sns-icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .badge-header img {
+            pointer-events: auto;
+        }
+
+        .badge-header {
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .profile-image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            display: inline-block;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .business-card {
+                max-width: 100%; /* 휴대폰 화면 크기에서는 100%로 설정하여 동일한 너비를 유지합니다. */
+                padding: 10px; /* 패딩 조절 */
+            }
+
+            .sns-icons {
+                text-align: left; /* 텍스트 왼쪽 정렬 */
+            }
+
+            .sns-icons a {
+                margin-right: 10px;
+            }
+
+            .sns-icons img {
+                width: 25px;
+                height: 25px;
+            }
+
+            .profile-image {
+                width: 150px; /* 프로필 이미지 크기 축소 */
+                height: 150px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="profile-image-container">
-    <div class="profile-image">
-      <img src="미모티콘.png" alt="Profile Image">
-    </div>
-  </div>
-  <div class="business-card">
-    <h1>옥은수</h1>
-    <p><strong>직책:</strong> 데이터분석가</p>
-    <p><strong>회사:</strong> WillChair</p>
-    <p><strong>이메일:</strong> esok0617@gmail.com</p>
-    <p><strong>전화번호:</strong> 010-6628-0617</p>
-    <div class="sns-icons">
-        <a href="https://eunsuok.notion.site/Profile-34a91f735d3a4bc3b388a02a16ffa149?pvs=4"><img src="logo\Notion-logo.svg.png" alt="Notion Logo"></a>
-        <a href="https://github.com/OKEunsu"><img src="logo\github-mark.png" alt="Github Logo"></a>
-        <a href="https://public.tableau.com/app/profile/.37725124"><img src="logo\tableau logo.png" alt="Tableau Logo"></a>
-        <a href="https://okbublewrap.tistory.com/"><img src="logo\Tistory logo.png" alt="Icon"></a>
-    </div>
-  </div>
-  </div>
-  <div class="business-card" style="margin-top: 20px; padding-top: 5px;"> <!-- You can adjust the margin-top value as needed for spacing -->
-    <h2>Skill Set</h1>
-    <h3>Laguage</h3>
-      <div class="badge-container">
-        <div class="badge-item">
-          <div class="badge-header" onclick="toggleDescription(this)">
-            <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-          </div>
-          <div class="badge-description" style="display: none;">
-            <img src="https://img.shields.io/badge/numpy-013243.svg?style=for-the-badge&logo=numpy&logoColor=white">
-            <img src="https://img.shields.io/badge/pandas-150458.svg?style=for-the-badge&logo=pandas&logoColor=white">
-            <img src="https://img.shields.io/badge/scikitlearn-3F4F75.svg?style=for-the-badge&logo=scikitlearn&logoColor=white">
-            <img src="https://img.shields.io/badge/plotly-F7931E.svg?style=for-the-badge&logo=plotly&logoColor=white">
-            <img src="https://img.shields.io/badge/tensorflow-FF6F00.svg?style=for-the-badge&logo=tensorflow&logoColor=white">
-            <img src="https://img.shields.io/badge/keras-D00000.svg?style=for-the-badge&logo=keras&logoColor=white">
-            <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black">
-            <img src="https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white">
-            <img src="https://img.shields.io/badge/streamlit%20-%23FF0000.svg?style=for-the-badge&logo=streamlit&logoColor=white">
-            <img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white">
-            <img src="https://img.shields.io/badge/yolo-00FFFF?style=for-the-badge&logo=yolo&logoColor=black">
-          </div>
+    <div class="profile-image-container">
+        <div class="profile-image">
+            <img src="미모티콘.png" alt="Profile Image">
         </div>
-        <div>
-          <img src="https://img.shields.io/badge/r-276DC3?style=for-the-badge&logo=r&logoColor=white">
+    </div>
+    <div class="business-card">
+        <h1>옥은수</h1>
+        <p><strong>직책:</strong> 데이터분석가</p>
+        <p><strong>회사:</strong> WillChair</p>
+        <p><strong>이메일:</strong> esok0617@gmail.com</p>
+        <p><strong>전화번호:</strong> 010-6628-0617</p>
+        <div class="sns-icons">
+            <a href="https://eunsuok.notion.site/Profile-34a91f735d3a4bc3b388a02a16ffa149?pvs=4"><img
+                    src="logo\Notion-logo.svg.png" alt="Notion Logo"></a>
+            <a href="https://github.com/OKEunsu"><img src="logo\github-mark.png" alt="Github Logo"></a>
+            <a href="https://public.tableau.com/app/profile/.37725124"><img src="logo\tableau logo.png"
+                    alt="Tableau Logo"></a>
+            <a href="https://okbublewrap.tistory.com/"><img src="logo\Tistory logo.png" alt="Icon"></a>
         </div>
-      </div>
-    <h3>DataBase</h3>
-      <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white">
-      <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
-      <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white">
-    <h3>FrontEnd</h3>
-      <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-      <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-      <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-      <img src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white">
-      <img src="https://img.shields.io/badge/flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white">
-    <h3>Etc.</h3>  
-      <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
-      <img src="https://img.shields.io/badge/tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white">
-      <img src="https://img.shields.io/badge/microsoftexcel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white">  
-      <img src="https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white">
-  </div>
-  </div>
-    <div id="map" style="width:100%;height:100%;margin-top:20px;" ></div>
+    </div>
+    </div>
+    <div class="business-card" style="margin-top: 20px; padding-top: 5px;"> <!-- You can adjust the margin-top value as needed for spacing -->
+        <h2>Skill Set</h1>
+            <h3>Laguage</h3>
+            <div class="badge-container">
+                <div class="badge-item">
+                    <div class="badge-header" onclick="toggleDescription(this)">
+                        <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+                    </div>
+                    <div class="badge-description" style="display: none;">
+                        <img src="https://img.shields.io/badge/numpy-013243.svg?style=for-the-badge&logo=numpy&logoColor=white">
+                        <img src="https://img.shields.io/badge/pandas-150458.svg?style=for-the-badge&logo=pandas&logoColor=white">
+                        <img src="https://img.shields.io/badge/scikitlearn-3F4F75.svg?style=for-the-badge&logo=scikitlearn&logoColor=white">
+                        <img src="https://img.shields.io/badge/plotly-F7931E.svg?style=for-the-badge&logo=plotly&logoColor=white">
+                        <img src="https://img.shields.io/badge/tensorflow-FF6F00.svg?style=for-the-badge&logo=tensorflow&logoColor=white">
+                        <img src="https://img.shields.io/badge/keras-D00000.svg?style=for-the-badge&logo=keras&logoColor=white">
+                        <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black">
+                        <img src="https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white">
+                        <img src="https://img.shields.io/badge/streamlit%20-%23FF0000.svg?style=for-the-badge&logo=streamlit&logoColor=white">
+                        <img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white">
+                        <img src="https://img.shields.io/badge/yolo-00FFFF?style=for-the-badge&logo=yolo&logoColor=black">
+                    </div>
+                </div>
+                <div>
+                    <img src="https://img.shields.io/badge/r-276DC3?style=for-the-badge&logo=r&logoColor=white">
+                </div>
+            </div>
+            <h3>DataBase</h3>
+            <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white">
+            <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+            <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white">
+            <h3>FrontEnd</h3>
+            <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+            <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+            <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+            <img src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white">
+            <img src="https://img.shields.io/badge/flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white">
+            <h3>Etc.</h3>
+            <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+            <img src="https://img.shields.io/badge/tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white">
+            <img src="https://img.shields.io/badge/microsoftexcel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white">
+            <img src="https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white">
+        </div>
+        </div>
+        <div id="map" style="width:100%;height:100%;margin-top:20px;"></div>
 
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4d86c6a277847d0aa43107afbdd8b67a"></script>
-  <script>
-    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-        mapOption = { 
-            center: new kakao.maps.LatLng(35.1171, 129.0883), // 지도의 중심좌표
-            level: 4 // 지도의 확대 레벨
-        };
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4d86c6a277847d0aa43107afbdd8b67a"></script>
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = { 
+                center: new kakao.maps.LatLng(35.1171, 129.0883), // 지도의 중심좌표
+                level: 4 // 지도의 확대 레벨
+            };
 
-    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-    var imageSrc = 'https://cdn1.iconfinder.com/data/icons/carbon-design-system-vol-5/32/location--person--filled-512.png', // 마커이미지의 주소입니다    
-        imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
-        imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
-        
-    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-        markerPosition = new kakao.maps.LatLng(35.1171, 129.0883); // 마커가 표시될 위치입니다
+        var imageSrc = 'https://cdn1.iconfinder.com/data/icons/carbon-design-system-vol-5/32/location--person--filled-512.png', // 마커이미지의 주소입니다    
+            imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+            imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+            
+        // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+            markerPosition = new kakao.maps.LatLng(35.1171, 129.0883); // 마커가 표시될 위치입니다
 
-  // 마커를 생성합니다
-    var marker = new kakao.maps.Marker({
-        position: markerPosition, 
-        image: markerImage // 마커이미지 설정 
-    });
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition, 
+            image: markerImage // 마커이미지 설정 
+        });
 
-    // 마커가 지도 위에 표시되도록 설정합니다
-    marker.setMap(map);  
-  </script>
-  <script>
-    function toggleDescription(badgeHeader) {
-      var description = badgeHeader.nextElementSibling;
-      if (description) {
-        description.style.display = (description.style.display === 'none') ? 'block' : 'none';
-      }
-    }
-  </script>
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);  
+    </script>
+    <script>
+        function toggleDescription(badgeHeader) {
+            var description = badgeHeader.nextElementSibling;
+            if (description) {
+                description.style.display = (description.style.display === 'none') ? 'block' : 'none';
+            }
+        }
+    </script>
 </body>
 </html>
