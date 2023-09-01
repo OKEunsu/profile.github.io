@@ -14,100 +14,101 @@
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            text-align: center;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
+    body {
+        font-family: 'Noto Sans KR', sans-serif;
+        text-align: center;
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
 
+    .business-card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 90%; /* 최대 너비 설정 */
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    p {
+        margin: 10px 0;
+    }
+
+    .sns-icons {
+        text-align: center; /* 중앙 정렬 */
+    }
+
+    .sns-icons a {
+        display: inline-block;
+        margin-right: 15px;
+        margin-top: 10px;
+    }
+
+    .sns-icons img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .badge-header img {
+        pointer-events: auto;
+    }
+
+    .badge-header {
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .profile-image-container {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #f0f0f0;
+        display: inline-block;
+    }
+
+    .profile-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
         .business-card {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 90%; /* 최대 너비 설정 */
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        h1 {
-            margin-top: 0;
-        }
-
-        p {
-            margin: 10px 0;
+            max-width: 100%; /* 휴대폰 화면 크기에서는 100%로 설정하여 동일한 너비를 유지합니다. */
+            padding: 10px; /* 패딩 조절 */
         }
 
         .sns-icons {
-            text-align: center; /* 중앙 정렬 */
+            text-align: left; /* 텍스트 왼쪽 정렬 */
         }
 
         .sns-icons a {
-            display: inline-block;
-            margin-right: 15px;
-            margin-top: 10px;
+            margin-right: 10px;
         }
 
         .sns-icons img {
-            width: 30px;
-            height: 30px;
-        }
-
-        .badge-header img {
-            pointer-events: auto;
-        }
-
-        .badge-header {
-            cursor: pointer;
-            display: inline-block;
-        }
-
-        .profile-image-container {
-            text-align: center;
-            margin-bottom: 20px;
+            width: 25px;
+            height: 25px;
         }
 
         .profile-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            overflow: hidden;
-            background-color: #f0f0f0;
-            display: inline-block;
+            width: 150px; /* 프로필 이미지 크기 축소 */
+            height: 150px;
         }
+    }
+</style>
 
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        @media (max-width: 768px) {
-            .business-card {
-                max-width: 100%; /* 휴대폰 화면 크기에서는 100%로 설정하여 동일한 너비를 유지합니다. */
-                padding: 10px; /* 패딩 조절 */
-            }
-
-            .sns-icons {
-                text-align: left; /* 텍스트 왼쪽 정렬 */
-            }
-
-            .sns-icons a {
-                margin-right: 10px;
-            }
-
-            .sns-icons img {
-                width: 25px;
-                height: 25px;
-            }
-
-            .profile-image {
-                width: 150px; /* 프로필 이미지 크기 축소 */
-                height: 150px;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="profile-image-container">
