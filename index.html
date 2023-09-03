@@ -113,8 +113,21 @@
     height: 100%;
     margin-top: 20px;
     border-radius: 10px; /* 모서리를 둥글게 만듭니다. */
-}
-
+    }
+    .wrap {position: absolute;left: 5px;bottom: 70px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}
+    .wrap * {padding: 0;margin: 0;}
+    .wrap .info {width: 286px;height: 120px;border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
+    .wrap .info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
+    .info .title {padding: 5px 0 0 10px;height: 30px;background: #eee;border-bottom: 1px solid #ddd;font-size: 18px;font-weight: bold;}
+    .info .close {position: absolute;top: 10px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
+    .info .close:hover {cursor: pointer;}
+    .info .body {position: relative;overflow: hidden;}
+    .info .desc {position: relative;margin: 13px 0 0 90px;height: 75px;}
+    .desc .ellipsis {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+    .desc .jibun {font-size: 11px;color: #888;margin-top: -2px;}
+    .info .img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: hidden;}
+    .info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+    .info .link {color: #5085BB;}
 </style>
 
 
@@ -201,7 +214,26 @@
         var imageSrc = 'https://cdn1.iconfinder.com/data/icons/carbon-design-system-vol-5/32/location--person--filled-512.png', // 마커이미지의 주소입니다    
             imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
             imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
-            
+        var content = '<div class="wrap">' + 
+        '    <div class="info">' + 
+        '        <div class="title">' + 
+        '            윌체어' + 
+        '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' + 
+        '        </div>' + 
+        '        <div class="body">' + 
+        '            <div class="img">' +
+        '                <img src="https://play-lh.googleusercontent.com/cXRik0ZhlrO2xKv3xv81PH7uLEbW3BsBdjT4eRRfAVjl1lOcr09OcJ6f7G36KPmdj7rK=w240-h480-rw" width="73" height="70">' +
+        '           </div>' + 
+        '            <div class="desc">' + 
+        '                <div class="ellipsis">부산광역시 남구 신선로 365</div>' + 
+        '                <div class="jibun ellipsis">(지번) 부산 남구 용당동 251' +
+        '                <div class="jibun ellipsis">(우) 48548 </div>' + 
+        // '                <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></div>' + 
+        '            </div>' + 
+        '        </div>' + 
+        '    </div>' +    
+        '</div>';    
+        
         // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
         var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
             markerPosition = new kakao.maps.LatLng(35.1171, 129.0883); // 마커가 표시될 위치입니다
@@ -211,9 +243,15 @@
             position: markerPosition, 
             image: markerImage // 마커이미지 설정 
         });
-    
+        var overlay = new kakao.maps.CustomOverlay({
+            content: content,
+            map: map,
+            position: marker.getPosition()       
+        });
         // 마커가 지도 위에 표시되도록 설정합니다
         marker.setMap(map);  
+        kakao.maps.event.addListener(marker, 'click', function() {
+            overlay.setMap(map);
     </script>
     <script>
         function toggleDescription(badgeHeader) {
@@ -222,6 +260,9 @@
                 description.style.display = (description.style.display === 'none') ? 'block' : 'none';
             }
         }
+        function closeOverlay() {
+            overlay.setMap(null);     
+    } 
     </script>
 </body>
 </html>
