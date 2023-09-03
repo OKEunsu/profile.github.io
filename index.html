@@ -250,20 +250,23 @@
         });
         // 마커가 지도 위에 표시되도록 설정합니다
         marker.setMap(map);  
-        kakao.maps.event.addListener(marker, 'click', function() {
-            overlay.setMap(map);
+        kakao.maps.event.addListener(marker, 'click'), function() {
+            overlay.setMap(map)
+        };
     </script>
     <script>
-        function toggleDescription(badgeHeader) {
-            var description = badgeHeader.nextElementSibling;
-            if (description) {
-                description.style.display = (description.style.display === 'none') ? 'block' : 'none';
-            }
+      function toggleDescription(badgeHeader) {
+        var description = badgeHeader.nextElementSibling;
+        if (description) {
+            description.style.display = (description.style.display === 'none' || description.style.display === '') ? 'block' : 'none';
         }
-    
-        function closeOverlay() {
-            overlay.setMap(null);
-        }
-    </script>
+      }
+
+      function closeOverlay() {
+        overlay.setMap(null);
+      }
+</script>
+
+
 </body>
 </html>
