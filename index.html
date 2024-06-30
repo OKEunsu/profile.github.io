@@ -246,25 +246,20 @@
         <h2>Find Me</h2>
         <div id="map"></div>
     </div>
+    <div class="business-card" style="margin-top: 20px; padding-top: 5px;">
+    <h2>Find Me</h2>
+    <div id="map" style="width: 100%; height: 350px;"></div>
+</div>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=22f59d248573242ae7e893d62449d610"></script>
     <script>
-        function toggleDescription(element) {
-            var description = element.nextElementSibling;
-            if (description.style.display === 'none' || description.style.display === '') {
-                description.style.display = 'block';
-            } else {
-                description.style.display = 'none';
-            }
-        }
-
         var mapContainer = document.getElementById('map'),
             mapOption = {
                 center: new kakao.maps.LatLng(37.4782605, 126.9515208),
                 level: 3
             };
-
+    
         var map = new kakao.maps.Map(mapContainer, mapOption);
-
+    
         var markerImage = new kakao.maps.MarkerImage(
             './marker.png',
             new kakao.maps.Size(40, 40),  // 너비, 높이
@@ -273,13 +268,13 @@
                 offset: new kakao.maps.Point(22, 34)
             }
         );
-        
+    
         var marker = new kakao.maps.Marker({
             map: map, 
-            position: new kakao.maps.LatLng(33.450701, 126.570667),
+            position: new kakao.maps.LatLng(37.4782605, 126.9515208),
             image: markerImage  // 여기에 사용자 지정 마커 이미지를 할당합니다
         });
-        
+    
         // 커스텀 오버레이에 표시할 컨텐츠 입니다
         // 커스텀 오버레이는 아래와 같이 사용자가 자유롭게 컨텐츠를 구성하고 이벤트를 제어할 수 있기 때문에
         // 별도의 이벤트 메소드를 제공하지 않습니다 
@@ -301,7 +296,7 @@
                     '        </div>' + 
                     '    </div>' +    
                     '</div>';
-        
+    
         // 마커 위에 커스텀오버레이를 표시합니다
         // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
         var overlay = new kakao.maps.CustomOverlay({
@@ -309,12 +304,12 @@
             map: map,
             position: marker.getPosition()       
         });
-        
+    
         // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
         kakao.maps.event.addListener(marker, 'click', function() {
             overlay.setMap(map);
         });
-        
+    
         // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
         function closeOverlay() {
             overlay.setMap(null);     
