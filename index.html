@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eunsu Profile</title>
+    <title>옥은수 프로필</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-    <!-- 다른 아이콘 크기도 추가 -->
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -14,123 +13,213 @@
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-    body {
-        font-family: 'Noto Sans KR', sans-serif;
-        text-align: center;
-        padding: 20px;
-        background-color: #DAD4C6;
-    }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #DAD4C6;
+        }
 
-    .business-card {
-        background-color: #FFF8E7;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        max-width: 90%; /* 최대 너비 설정 */
-        margin: 0 auto;
-        text-align: left;
-    }
-
-    h1 {
-        margin-top: 0;
-    }
-
-    p {
-        margin: 10px 0;
-    }
-
-    .sns-icons {
-        text-align: left; /* 왼쪽 정렬로 변경 */
-    }
-
-    .sns-icons a {
-        display: inline-block;
-        margin-right: 15px;
-        margin-top: 10px;
-    }
-
-    .sns-icons img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .badge-header img {
-        pointer-events: auto;
-    }
-
-    .badge-header {
-        cursor: pointer;
-        display: inline-block;
-    }
-
-    .profile-image-container {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .profile-image {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        overflow: hidden;
-        background-color: #f0f0f0;
-        display: inline-block;
-    }
-
-    .profile-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    @media (max-width: 768px) {
         .business-card {
-            max-width: 100%; /* 휴대폰 화면 크기에서는 100%로 설정하여 동일한 너비를 유지합니다. */
-            padding: 10px; /* 패딩 조절 */
+            background-color: #FFF8E7;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 90%;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        h1, h2 {
+            margin-top: 0;
+        }
+
+        p {
+            margin: 10px 0;
         }
 
         .sns-icons {
-            text-align: left; /* 텍스트 왼쪽 정렬 */
+            text-align: left;
         }
 
         .sns-icons a {
-            margin-right: 10px;
+            display: inline-block;
+            margin-right: 15px;
+            margin-top: 10px;
         }
 
         .sns-icons img {
-            width: 25px;
-            height: 25px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .badge-header img {
+            pointer-events: auto;
+        }
+
+        .badge-header {
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .profile-image-container {
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         .profile-image {
-            width: 150px; /* 프로필 이미지 크기 축소 */
-            height: 150px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            display: inline-block;
         }
-    }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .business-card {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            .sns-icons {
+                text-align: left;
+            }
+
+            .sns-icons a {
+                margin-right: 10px;
+            }
+
+            .sns-icons img {
+                width: 25px;
+                height: 25px;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+        }
         
-    #map {
-    width: 90%
-    height: 100%;
-    margin-top: 20px;
-    border-radius: 10px; /* 모서리를 둥글게 만듭니다. */
-    }
-    .wrap {position: absolute;left: 5px;bottom: 70px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}
-    .wrap * {padding: 0;margin: 0;}
-    .wrap .info {width: 286px;height: 120px;border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
-    .wrap .info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
-    .info .title {padding: 5px 0 0 10px;height: 30px;background: #eee;border-bottom: 1px solid #ddd;font-size: 18px;font-weight: bold;}
-    .info .close {position: absolute;top: 10px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
-    .info .close:hover {cursor: pointer;}
-    .info .body {position: relative;overflow: hidden;}
-    .info .desc {position: relative;margin: 13px 0 0 90px;height: 75px;}
-    .desc .ellipsis {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-    .desc .jibun {font-size: 11px;color: #888;margin-top: -2px;}
-    .info .img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: hidden;}
-    .info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
-    .info .link {color: #5085BB;}
-</style>
+        #map {
+            width: 100%;
+            height: 350px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
 
+        .wrap {
+            position: absolute;
+            left: 5px;
+            bottom: 70px;
+            width: 288px;
+            height: 132px;
+            margin-left: -144px;
+            text-align: left;
+            overflow: hidden;
+            font-size: 12px;
+            font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+            line-height: 1.5;
+        }
 
+        .wrap * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap .info {
+            width: 286px;
+            height: 120px;
+            border-radius: 5px;
+            border-bottom: 2px solid #ccc;
+            border-right: 1px solid #ccc;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .wrap .info:nth-child(1) {
+            border: 0;
+            box-shadow: 0px 1px 2px #888;
+        }
+
+        .info .title {
+            padding: 5px 0 0 10px;
+            height: 30px;
+            background: #eee;
+            border-bottom: 1px solid #ddd;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .info .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #888;
+            width: 17px;
+            height: 17px;
+            background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');
+        }
+
+        .info .close:hover {
+            cursor: pointer;
+        }
+
+        .info .body {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info .desc {
+            position: relative;
+            margin: 13px 0 0 90px;
+            height: 75px;
+        }
+
+        .desc .ellipsis {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .desc .jibun {
+            font-size: 11px;
+            color: #888;
+            margin-top: -2px;
+        }
+
+        .info .img {
+            position: absolute;
+            top: 6px;
+            left: 5px;
+            width: 73px;
+            height: 71px;
+            border: 1px solid #ddd;
+            color: #888;
+            overflow: hidden;
+        }
+
+        .info:after {
+            content: '';
+            position: absolute;
+            margin-left: -12px;
+            left: 50%;
+            bottom: 0;
+            width: 22px;
+            height: 12px;
+            background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')
+        }
+
+        .info .link {
+            color: #5085BB;
+        }
+    </style>
 </head>
 <body>
     <div class="profile-image-container">
@@ -153,130 +242,72 @@
             <a href="https://okbublewrap.tistory.com/"><img src="logo\Tistory logo.png" alt="Icon"></a>
         </div>
     </div>
-    </div>
-    <div class="business-card" style="margin-top: 20px; padding-top: 5px;"> <!-- You can adjust the margin-top value as needed for spacing -->
+    <div class="business-card" style="margin-top: 20px; padding-top: 5px;">
         <h2>Skill Set</h2>
-            <h3>Laguage</h3>
-            <div class="badge-container">
-                <div class="badge-item">
-                    <div class="badge-header" onclick="toggleDescription(this)">
-                        <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-                    </div>
-                    <div class="badge-description" style="display: none;">
-                        <img src="https://img.shields.io/badge/numpy-013243.svg?style=for-the-badge&logo=numpy&logoColor=white">
-                        <img src="https://img.shields.io/badge/pandas-150458.svg?style=for-the-badge&logo=pandas&logoColor=white">
-                        <img src="https://img.shields.io/badge/scikitlearn-3F4F75.svg?style=for-the-badge&logo=scikitlearn&logoColor=white">
-                        <img src="https://img.shields.io/badge/plotly-F7931E.svg?style=for-the-badge&logo=plotly&logoColor=white">
-                        <img src="https://img.shields.io/badge/tensorflow-FF6F00.svg?style=for-the-badge&logo=tensorflow&logoColor=white">
-                        <img src="https://img.shields.io/badge/keras-D00000.svg?style=for-the-badge&logo=keras&logoColor=white">
-                        <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black">
-                        <img src="https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white">
-                        <img src="https://img.shields.io/badge/streamlit%20-%23FF0000.svg?style=for-the-badge&logo=streamlit&logoColor=white">
-                        <img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white">
-                        <img src="https://img.shields.io/badge/yolo-00FFFF?style=for-the-badge&logo=yolo&logoColor=black">
-                    </div>
+        <h3>Language</h3>
+        <div class="badge-container">
+            <div class="badge-item">
+                <div class="badge-header" onclick="toggleDescription(this)">
+                    <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
                 </div>
-                <div>
-                    <img src="https://img.shields.io/badge/r-276DC3?style=for-the-badge&logo=r&logoColor=white">
+                <div class="badge-description" style="display: none;">
+                    <img src="https://img.shields.io/badge/numpy-013243.svg?style=for-the-badge&logo=numpy&logoColor=white">
+                    <img src="https://img.shields.io/badge/pandas-150458.svg?style=for-the-badge&logo=pandas&logoColor=white">
+                    <img src="https://img.shields.io/badge/scikitlearn-3F4F75.svg?style=for-the-badge&logo=scikitlearn&logoColor=white">
+                    <img src="https://img.shields.io/badge/plotly-F7931E.svg?style=for-the-badge&logo=plotly&logoColor=white">
+                    <img src="https://img.shields.io/badge/tensorflow-FF6F00.svg?style=for-the-badge&logo=tensorflow&logoColor=white">
+                    <img src="https://img.shields.io/badge/pytorch-EE4C2C.svg?style=for-the-badge&logo=pytorch&logoColor=white">
+                    <img src="https://img.shields.io/badge/selenium-43B02A.svg?style=for-the-badge&logo=selenium&logoColor=white">
                 </div>
             </div>
-            <h3>DataBase</h3>
-            <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white">
-            <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
-            <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white">
-            <h3>FrontEnd</h3>
-            <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-            <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-            <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-            <img src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white">
-            <img src="https://img.shields.io/badge/flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white">
-            <h3>Etc.</h3>
-            <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
-            <img src="https://img.shields.io/badge/tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white">
-            <img src="https://img.shields.io/badge/microsoftexcel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white">
-            <img src="https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white">
         </div>
+        <h3>Visualization</h3>
+        <div class="badge-container">
+            <div class="badge-item">
+                <div class="badge-header" onclick="toggleDescription(this)">
+                    <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=Tableau&logoColor=white">
+                </div>
+                <div class="badge-description" style="display: none;">
+                </div>
+            </div>
+            <div class="badge-item">
+                <div class="badge-header" onclick="toggleDescription(this)">
+                    <img src="https://img.shields.io/badge/PowerBI-F2C811?style=for-the-badge&logo=PowerBI&logoColor=white">
+                </div>
+                <div class="badge-description" style="display: none;">
+                </div>
+            </div>
         </div>
-    <div id="map" style="width:100%;height:350px;"></div>
-
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=22f59d248573242ae7e893d62449d610"></script>
-<script>
-var mapContainer = document.getElementById('map'), // 지도의 중심좌표
-    mapOption = { 
-        center: new kakao.maps.LatLng(33.451475, 126.570528), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    }; 
-
-var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-var markerImage = new kakao.maps.MarkerImage(
-    './marker.png',
-    new kakao.maps.Size(40, 40),  // 너비, 높이
-    {
-        // 이미지의 앵커 포인트를 정의합니다
-        offset: new kakao.maps.Point(22, 34)
-    }
-);
-
-var marker = new kakao.maps.Marker({
-    map: map, 
-    position: new kakao.maps.LatLng(33.450701, 126.570667),
-    image: markerImage  // 여기에 사용자 지정 마커 이미지를 할당합니다
-});
-
-// 커스텀 오버레이에 표시할 컨텐츠 입니다
-// 커스텀 오버레이는 아래와 같이 사용자가 자유롭게 컨텐츠를 구성하고 이벤트를 제어할 수 있기 때문에
-// 별도의 이벤트 메소드를 제공하지 않습니다 
-var content = '<div class="wrap">' + 
-            '    <div class="info">' + 
-            '        <div class="title">' + 
-            '            카카오 스페이스닷원' + 
-            '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' + 
-            '        </div>' + 
-            '        <div class="body">' + 
-            '            <div class="img">' +
-            '                <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/thumnail.png" width="73" height="70">' +
-            '           </div>' + 
-            '            <div class="desc">' + 
-            '                <div class="ellipsis">제주특별자치도 제주시 첨단로 242</div>' + 
-            '                <div class="jibun ellipsis">(우) 63309 (지번) 영평동 2181</div>' + 
-            '                <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></div>' + 
-            '            </div>' + 
-            '        </div>' + 
-            '    </div>' +    
-            '</div>';
-
-// 마커 위에 커스텀오버레이를 표시합니다
-// 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
-var overlay = new kakao.maps.CustomOverlay({
-    content: content,
-    map: map,
-    position: marker.getPosition()       
-});
-
-// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
-kakao.maps.event.addListener(marker, 'click', function() {
-    overlay.setMap(map);
-});
-
-// 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
-function closeOverlay() {
-    overlay.setMap(null);     
-}
-</script>
+    </div>
+    <div class="business-card" style="margin-top: 20px; padding-top: 5px;">
+        <h2>Find Me</h2>
+        <div id="map"></div>
+    </div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=22f59d248573242ae7e893d62449d610"></script>
     <script>
-      function toggleDescription(badgeHeader) {
-        var description = badgeHeader.nextElementSibling;
-        if (description) {
-            description.style.display = (description.style.display === 'none' || description.style.display === '') ? 'block' : 'none';
+        function toggleDescription(element) {
+            var description = element.nextElementSibling;
+            if (description.style.display === 'none' || description.style.display === '') {
+                description.style.display = 'block';
+            } else {
+                description.style.display = 'none';
+            }
         }
-      }
 
-      function closeOverlay() {
-        overlay.setMap(null);
-      }
-</script>
+        var mapContainer = document.getElementById('map'),
+            mapOption = {
+                center: new kakao.maps.LatLng(37.5665, 126.9780),
+                level: 3
+            };
 
+        var map = new kakao.maps.Map(mapContainer, mapOption);
 
+        var markerPosition  = new kakao.maps.LatLng(37.5665, 126.9780); 
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+
+        marker.setMap(map);
+    </script>
 </body>
 </html>
