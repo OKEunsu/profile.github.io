@@ -1,1 +1,1 @@
-https://okeunsu.github.io/profile.github.io/
+https://okeunsu.github.io/
