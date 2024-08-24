@@ -232,7 +232,7 @@
         <p><strong>직책:</strong> 데이터분석가</p>
         <p><strong>회사:</strong> - </p>
         <p><strong>이메일:</strong> esok0617@gmail.com</p>
-        <p><strong>전화번호:</strong> <a href="tel:010-6628-0617">010-6628-0617</a></p>
+        p><strong>전화번호:</strong> <a id="phone-link"></a></p>
         <div class="sns-icons">
             <a href="https://eunsuok.notion.site/Profile-34a91f735d3a4bc3b388a02a16ffa149?pvs=4"><img
                     src="logo\Notion-logo.svg.png" alt="Notion Logo"></a>
@@ -246,6 +246,10 @@
     <h2>Find Me</h2>
     <div id="map" style="width: 100%; height: 350px;"></div>
 </div>
+    <script>
+        document.getElementById('phone-link').innerHTML = '010-****-0617';
+        document.getElementById('phone-link').href = 'tel:010-****-0617';
+    </script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=22f59d248573242ae7e893d62449d610"></script>
     <script>
         var mapContainer = document.getElementById('map'),
