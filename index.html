@@ -1,86 +1,155 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T3FLQ9LN');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-T3FLQ9LN');</script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>옥은수 프로필</title>
+    <meta name="description" content="옥은수 - 데이터분석가 온라인 명함">
+    <title>옥은수 | 데이터분석가</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="bubble.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="bubble.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Noto Sans KR', sans-serif;
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Cosmic White Background Animation */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(248, 249, 250, 0.6) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(233, 236, 239, 0.4) 0%, transparent 50%);
+            animation: cosmicFloat 15s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes cosmicFloat {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: scale(1.1);
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 60px;
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.08),
+                0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow:
+                0 25px 70px rgba(0, 0, 0, 0.12),
+                0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+        }
+
+        .profile-section {
             text-align: center;
-            padding: 20px;
-            background-color: #DAD4C6;
-        }
-
-        .business-card {
-            background-color: #FFF8E7;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 90%;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        h1, h2 {
-            margin-top: 0;
-        }
-
-        p {
-            margin: 10px 0;
-        }
-
-        .sns-icons {
-            text-align: left;
-        }
-
-        .sns-icons a {
-            display: inline-block;
-            margin-right: 15px;
-            margin-top: 10px;
-        }
-
-        .sns-icons img {
-            width: 30px;
-            height: 30px;
-        }
-
-        .badge-header img {
-            pointer-events: auto;
-        }
-
-        .badge-header {
-            cursor: pointer;
-            display: inline-block;
+            margin-bottom: 50px;
         }
 
         .profile-image-container {
-            text-align: center;
-            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 30px;
         }
 
         .profile-image {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             overflow: hidden;
-            background-color: #f0f0f0;
-            display: inline-block;
+            border: 5px solid rgba(255, 255, 255, 1);
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, 0.1),
+                0 0 0 10px rgba(248, 249, 250, 0.5);
+            transition: all 0.3s ease;
+            animation: profileFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes profileFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05) translateY(-10px);
+            box-shadow:
+                0 15px 50px rgba(0, 0, 0, 0.15),
+                0 0 0 10px rgba(233, 236, 239, 0.8);
         }
 
         .profile-image img {
@@ -89,238 +158,504 @@
             object-fit: cover;
         }
 
+        .name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #495057 0%, #212529 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .title {
+            font-size: 1.3rem;
+            color: #6c757d;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: #868e96;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            padding: 20px 30px;
+            background: linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(233, 236, 239, 0.6) 100%);
+            border-radius: 15px;
+            border-left: 4px solid #adb5bd;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, #dee2e6 50%, transparent 100%);
+            margin: 40px 0;
+        }
+
+        .info-section {
+            margin-bottom: 40px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            padding: 18px 25px;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, rgba(248, 249, 250, 0.5) 0%, rgba(255, 255, 255, 0.3) 100%);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(222, 226, 230, 0.5);
+        }
+
+        .info-item:hover {
+            background: linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%);
+            transform: translateX(5px);
+            border-color: #adb5bd;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #495057;
+            min-width: 100px;
+            font-size: 1rem;
+        }
+
+        .info-value {
+            color: #6c757d;
+            font-size: 1rem;
+        }
+
+        .info-value a {
+            color: #495057;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .info-value a:hover {
+            color: #212529;
+        }
+
+        .tech-section {
+            margin-top: 40px;
+        }
+
+        .tech-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .tech-stack {
+            display: flex;
+            justify-content: flex-start;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tech-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.8) 100%);
+            border-radius: 25px;
+            border: 2px solid rgba(222, 226, 230, 0.5);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .tech-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            border-color: #adb5bd;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(248, 249, 250, 0.95) 100%);
+        }
+
+        .tech-badge img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .tech-badge span {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .blog-section {
+            margin-top: 40px;
+        }
+
+        .blog-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .blog-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .blog-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.8) 100%);
+            border-radius: 15px;
+            border: 2px solid rgba(222, 226, 230, 0.5);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            border-color: #adb5bd;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(248, 249, 250, 0.95) 100%);
+        }
+
+        .blog-icon {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #495057 0%, #212529 100%);
+            font-size: 1.5rem;
+        }
+
+        .blog-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .blog-post-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 8px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .blog-description {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .blog-date {
+            font-size: 0.85rem;
+            color: #868e96;
+        }
+
+        .social-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .social-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.9) 100%);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(222, 226, 230, 0.5);
+            overflow: hidden;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border-color: #adb5bd;
+        }
+
+        .social-link img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .social-link:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .business-card {
-                max-width: 100%;
-                padding: 10px;
-            }
-
-            .sns-icons {
-                text-align: left;
-            }
-
-            .sns-icons a {
-                margin-right: 10px;
-            }
-
-            .sns-icons img {
-                width: 25px;
-                height: 25px;
+            .card {
+                padding: 40px 30px;
+                border-radius: 20px;
             }
 
             .profile-image {
                 width: 150px;
                 height: 150px;
             }
-        }
-        
-        #map {
-            width: 100%;
-            height: 350px;
-            margin-top: 20px;
-            border-radius: 10px;
+
+            .name {
+                font-size: 2rem;
+            }
+
+            .title {
+                font-size: 1.1rem;
+            }
+
+            .tagline {
+                font-size: 0.95rem;
+                padding: 15px 20px;
+            }
+
+            .info-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px 20px;
+            }
+
+            .info-label {
+                margin-bottom: 5px;
+                min-width: auto;
+            }
+
+            .social-link {
+                width: 55px;
+                height: 55px;
+            }
+
+            .social-link img {
+                width: 26px;
+                height: 26px;
+            }
+
+            .tech-badge {
+                padding: 10px 16px;
+                gap: 8px;
+            }
+
+            .tech-badge img {
+                width: 20px;
+                height: 20px;
+            }
+
+            .tech-badge span {
+                font-size: 0.9rem;
+            }
+
+            .blog-card {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+            }
+
+            .blog-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .blog-post-title {
+                font-size: 1rem;
+                white-space: normal;
+            }
+
+            .blog-description {
+                font-size: 0.9rem;
+            }
         }
 
-        .wrap {
-            position: absolute;
-            left: 5px;
-            bottom: 20px;
-            width: 288px;
-            height: 132px;
-            margin-left: -144px;
-            text-align: left;
-            overflow: hidden;
-            font-size: 12px;
-            font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
-            line-height: 1.5;
-        }
+        @media (max-width: 480px) {
+            .card {
+                padding: 30px 20px;
+            }
 
-        .wrap * {
-            padding: 0;
-            margin: 0;
-        }
+            .name {
+                font-size: 1.8rem;
+            }
 
-        .wrap .info {
-            width: 286px;
-            height: 120px;
-            border-radius: 5px;
-            border-bottom: 2px solid #ccc;
-            border-right: 1px solid #ccc;
-            overflow: hidden;
-            background: #fff;
-        }
-
-        .wrap .info:nth-child(1) {
-            border: 0;
-            box-shadow: 0px 1px 2px #888;
-        }
-
-        .info .title {
-            padding: 5px 0 0 10px;
-            height: 30px;
-            background: #eee;
-            border-bottom: 1px solid #ddd;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .info .close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            color: #888;
-            width: 17px;
-            height: 17px;
-            background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');
-        }
-
-        .info .close:hover {
-            cursor: pointer;
-        }
-
-        .info .body {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .info .desc {
-            position: relative;
-            margin: 13px 0 0 90px;
-            height: 75px;
-        }
-
-        .desc .ellipsis {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        .desc .jibun {
-            font-size: 11px;
-            color: #888;
-            margin-top: -2px;
-        }
-
-        .info .img {
-            position: absolute;
-            top: 6px;
-            left: 5px;
-            width: 73px;
-            height: 71px;
-            border: 1px solid #ddd;
-            color: #888;
-            overflow: hidden;
-        }
-
-        .info:after {
-            content: '';
-            position: absolute;
-            margin-left: -12px;
-            left: 50%;
-            bottom: 0;
-            width: 22px;
-            height: 12px;
-            background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')
-        }
-
-        .info .link {
-            color: #5085BB;
+            .profile-image {
+                width: 130px;
+                height: 130px;
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3FLQ9LN"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3FLQ9LN" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="profile-image-container">
-        <div class="profile-image">
-            <img src="미모티콘.png" alt="Profile Image">
-        </div>
-    </div>
-    <div class="business-card">
-        <h1>옥은수</h1>
-        <p><strong>직책:</strong> 데이터분석가</p>
-        <p><strong>회사:</strong> - </p>
-        <p><strong>이메일:</strong> eunsu-ok@naver.com</p>
-        <div class="sns-icons">
-            <a href="https://eunsuok.notion.site/Profile-34a91f735d3a4bc3b388a02a16ffa149?pvs=4"><img
-                    src="logo\Notion-logo.svg.png" alt="Notion Logo"></a>
-            <a href="https://github.com/OKEunsu"><img src="logo\github-mark.png" alt="Github Logo"></a>
-            <a href="https://public.tableau.com/app/profile/.37725124"><img src="logo\tableau logo.png"
-                    alt="Tableau Logo"></a>
-            <a href="https://okbublewrap.tistory.com/"><img src="logo\Tistory logo.png" alt="Icon"></a>
-        </div>
-    </div>
-    <div class="business-card" style="margin-top: 20px; padding-top: 5px;">
-    <h2>Find Me</h2>
-    <div id="map" style="width: 100%; height: 350px;"></div>
-</div>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=22f59d248573242ae7e893d62449d610"></script>
-    <script>
-        var mapContainer = document.getElementById('map'),
-            mapOption = {
-                center: new kakao.maps.LatLng(37.4782617280478, 126.95151954889297),
-                level: 3
-            };
-    
-        var map = new kakao.maps.Map(mapContainer, mapOption);
-    
-        var markerImage = new kakao.maps.MarkerImage(
-            './marker.png',
-            new kakao.maps.Size(40, 40),  // 너비, 높이
-            {
-                // 이미지의 앵커 포인트를 정의합니다
-                offset: new kakao.maps.Point(20, 14)
-            }
-        );
-    
-        var marker = new kakao.maps.Marker({
-            map: map, 
-            position: new kakao.maps.LatLng(37.4782617280478, 126.95151954889297),
-            image: markerImage  // 여기에 사용자 지정 마커 이미지를 할당합니다
-        });
-    
-        // 커스텀 오버레이에 표시할 컨텐츠 입니다
-        // 커스텀 오버레이는 아래와 같이 사용자가 자유롭게 컨텐츠를 구성하고 이벤트를 제어할 수 있기 때문에
-        // 별도의 이벤트 메소드를 제공하지 않습니다 
-        var content = '<div class="wrap">' + 
-                    '    <div class="info">' + 
-                    '        <div class="title">' + 
-                    '            관악구청' + 
-                    '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' + 
-                    '        </div>' + 
-                    '        <div class="body">' + 
-                    '            <div class="img">' +
-                    '                <img src="https://www.gwanak.go.kr/images/gwanak/m1/gwanak_logo.png" width="73" height="70">' +
-                    '           </div>' + 
-                    '            <div class="desc">' + 
-                    '                <div class="ellipsis">145 Gwanak-ro, Gwanak-gu, Seoul, South Korea</div>' + 
-                    '                <div class="jibun ellipsis">(reformed 5-digit postal ZIP code): 08832</div>' + 
-                    '                <div><a href="https://www.gwanak.go.kr/site/gwanak/main.do" target="_blank" class="link">홈페이지</a></div>' + 
-                    '            </div>' + 
-                    '        </div>' + 
-                    '    </div>' +    
-                    '</div>';
-    
-        // 마커 위에 커스텀오버레이를 표시합니다
-        // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
-        var overlay = new kakao.maps.CustomOverlay({
-            content: content,
-            map: map,
-            position: marker.getPosition()
-        });
 
-    
-        // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
-        kakao.maps.event.addListener(marker, 'click', function() {
-            overlay.setMap(map);
-        });
-    
-        // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
-        function closeOverlay() {
-            overlay.setMap(null);     
-        }
-    </script>
+    <div class="container">
+        <div class="card">
+            <div class="profile-section">
+                <div class="profile-image-container">
+                    <div class="profile-image">
+                        <img src="노션프로필3.png" alt="옥은수 프로필 사진">
+                    </div>
+                </div>
+                <h1 class="name">옥은수</h1>
+                <p class="title">데이터분석가</p>
+                <p class="tagline">
+                    실제 서비스 데이터를 분석하여 전환율 개선과 지표 구조화를 이끌었던 데이터 분석가입니다.
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="info-section">
+                <div class="info-item">
+                    <span class="info-label">📧 이메일</span>
+                    <span class="info-value">
+                        <a href="mailto:eunsu-ok@naver.com">eunsu-ok@naver.com</a>
+                    </span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">💼 전문분야</span>
+                    <span class="info-value">데이터 기반 제품 개선, 실험 설계 및 최적화</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">🎯 관심사</span>
+                    <span class="info-value">사용자 행동 분석 · 서비스 전환율·잔존율 개선</span>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="tech-section">
+                <h3 class="tech-title">Tech Stack</h3>
+                <div class="tech-stack">
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                            alt="SQL">
+                        <span>SQL</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                            alt="Python">
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau">
+                        <span>Tableau</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://n8n.io/favicon.ico" alt="n8n">
+                        <span>n8n</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                            alt="BigQuery">
+                        <span>BigQuery</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                            alt="Docker">
+                        <span>Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="blog-section">
+                <h3 class="blog-title">Recent Posts & Projects</h3>
+                <div class="blog-posts">
+                    <a href="https://github.com/OKEunsu/Data-Science/tree/main/Data-Engineering/brazilian-e-commerce-data-warehouse"
+                        class="blog-card" target="_blank" rel="noopener noreferrer">
+                        <div class="blog-icon">🏗️</div>
+                        <div class="blog-content">
+                            <h4 class="blog-post-title">브라질 이커머스 데이터 웨어하우스 구축</h4>
+                            <p class="blog-description">실제 이커머스 데이터를 활용한 데이터 웨어하우스 설계 및 구축, 스타 스키마 구성과 SQL 쿼리 최적화</p>
+                            <span class="blog-date">Data Engineering Project</span>
+                        </div>
+                    </a>
+                    <a href="https://stockportfolioanlysis.streamlit.app" class="blog-card" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="blog-icon">📈</div>
+                        <div class="blog-content">
+                            <h4 class="blog-post-title">주식 포트폴리오 분석 대시보드</h4>
+                            <p class="blog-description">Streamlit을 활용한 실시간 주식 데이터 분석 및 포트폴리오 성과 시각화 대시보드</p>
+                            <span class="blog-date">Streamlit App</span>
+                        </div>
+                    </a>
+                    <a href="https://okbublewrap.tistory.com/category/%EA%B0%9C%EB%B0%9C/SQL" class="blog-card"
+                        target="_blank" rel="noopener noreferrer">
+                        <div class="blog-icon">💾</div>
+                        <div class="blog-content">
+                            <h4 class="blog-post-title">SQL 문제 풀이 모음</h4>
+                            <p class="blog-description">데이터 분석을 위한 SQL 쿼리 최적화, Window Function, CTE 활용 실전 문제 풀이</p>
+                            <span class="blog-date">Tistory Blog</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="social-section">
+                <h3 class="social-title">Connect With Me</h3>
+                <div class="social-links">
+                    <a href="https://eunsuok.notion.site/Profile-34a91f735d3a4bc3b388a02a16ffa149?pvs=4"
+                        class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Notion">
+                        <img src="logo/Notion-logo.svg.png" alt="Notion">
+                    </a>
+                    <a href="https://github.com/OKEunsu" class="social-link" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <img src="logo/github-mark.png" alt="GitHub">
+                    </a>
+                    <a href="https://public.tableau.com/app/profile/.37725124" class="social-link" target="_blank"
+                        rel="noopener noreferrer" aria-label="Tableau">
+                        <img src="logo/tableau logo.png" alt="Tableau">
+                    </a>
+                    <a href="https://okbublewrap.tistory.com/" class="social-link" target="_blank"
+                        rel="noopener noreferrer" aria-label="Tistory">
+                        <img src="logo/Tistory logo.png" alt="Tistory">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
